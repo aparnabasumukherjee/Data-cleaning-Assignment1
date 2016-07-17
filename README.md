@@ -6,11 +6,11 @@ library(data.table)
 
 library(dplyr)
 
- #Read Supporting Metadata
+#Read Supporting Metadata#
  
 directory <- setwd("D:/R learning/dataclean/UCI HAR Dataset")
 
- # download variable names for features
+#download variable names for features#
  
 featureNames <- read.table("D:/R learning/dataclean/UCI HAR Dataset/features.txt" ,,header = FALSE)
 
