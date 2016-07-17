@@ -76,26 +76,28 @@ names(activityLabels) <- c("activity", "levels")
 merge = merge(Data1, activityLabels, by = 'activity')
 
 #Appropriately labels the data set with descriptive variable names.
-##prefix t is replaced by time
-##Acc is replaced by Accelerometer
-##Gyro is replaced by Gyroscope
-##prefix f is replaced by frequency
-##Mag is replaced by Magnitude
-##BodyBody is replaced by Body
+
+###prefix t is replaced by time
 
 names(merge)<-gsub("^t", "time", names(merge))
 
-names(merge)<-gsub("^f", "frequency", names(merge))
+###Acc is replaced by Accelerometer
 
 names(merge)<-gsub("Acc", "Accelerometer", names(merge))
 
+###Gyro is replaced by Gyroscope
+
 names(merge)<-gsub("Gyro", "Gyroscope", names(merge))
+
+###prefix f is replaced by frequency
+###Mag is replaced by Magnitude
+###BodyBody is replaced by Body
+
+names(merge)<-gsub("^f", "frequency", names(merge))
 
 names(merge)<-gsub("Mag", "Magnitude", names(merge))
 
 names(merge)<-gsub("BodyBody", "Body", names(merge))
-
-
 
 #creates a second data set with the average of each variable for each activity and each subject.
 
